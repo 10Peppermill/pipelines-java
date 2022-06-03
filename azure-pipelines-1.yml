@@ -32,8 +32,8 @@ jobs:
       az boards work-item create \
         --title "Build $(build.buildNumber) failed" \
         --type bug \
-        --org $(System.TeamFoundationCollectionUri) \
-        --project $(System.TeamProject)
+        --org "https://dev.azure.com/PeppermillPipes" \
+        --project "Azure DevOps Project"
     env: 
       AZURE_DEVOPS_EXT_PAT: $(System.AccessToken)
     displayName: 'Create work item on failure'
